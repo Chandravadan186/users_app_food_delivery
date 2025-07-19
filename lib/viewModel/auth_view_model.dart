@@ -11,7 +11,11 @@ import '../view/mainScreens/home_screen.dart';
 
 class AuthViewModel
 {
+<<<<<<< HEAD
   validateSignUpForm(XFile? imageXFile, String password, String confirmPassword, String name, String email, String phone, String locationAddress, BuildContext context) async
+=======
+  validateSignUpForm(XFile? imageXFile, String password, String confirmPassword, String name, String email, BuildContext context) async
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
   {
     if(imageXFile == null)
     {
@@ -22,7 +26,11 @@ class AuthViewModel
     {
       if(password == confirmPassword)
       {
+<<<<<<< HEAD
         if(name.isNotEmpty && email.isNotEmpty && password.isNotEmpty && confirmPassword.isNotEmpty && phone.isNotEmpty && locationAddress.isNotEmpty)
+=======
+        if(name.isNotEmpty && email.isNotEmpty && password.isNotEmpty && confirmPassword.isNotEmpty)
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
         {
           commonViewModel.showSnackBar("Please wait...", context);
 
@@ -30,7 +38,11 @@ class AuthViewModel
 
           String downloadUrl = await uploadImageToStorage(imageXFile);
 
+<<<<<<< HEAD
           await saveUserDataToFirestore(currentFirebaseUser, downloadUrl, name, email, password, locationAddress, phone);
+=======
+          await saveUserDataToFirestore(currentFirebaseUser, downloadUrl, name, email, password);
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
 
           Navigator.push(context, MaterialPageRoute(builder: (c)=> HomeScreen()));
 
@@ -79,7 +91,11 @@ class AuthViewModel
     String downloadUrl = "";
 
     String fileName = DateTime.now().millisecondsSinceEpoch.toString();
+<<<<<<< HEAD
     fStorage.Reference storageRef = fStorage.FirebaseStorage.instance.ref().child("ridersImages").child(fileName);
+=======
+    fStorage.Reference storageRef = fStorage.FirebaseStorage.instance.ref().child("usersImages").child(fileName);
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
     fStorage.UploadTask uploadTask = storageRef.putFile(File(imageXFile!.path));
     fStorage.TaskSnapshot taskSnapshot = await uploadTask.whenComplete(() => {});
     await taskSnapshot.ref.getDownloadURL().then((urlImage)
@@ -90,27 +106,42 @@ class AuthViewModel
     return downloadUrl;
   }
 
+<<<<<<< HEAD
   saveUserDataToFirestore(currentFirebaseUser, downloadUrl, name, email, password, locationAddress, phone) async
   {
     FirebaseFirestore.instance.collection("riders").doc(currentFirebaseUser.uid)
+=======
+  saveUserDataToFirestore(currentFirebaseUser, downloadUrl, name, email, password) async
+  {
+    FirebaseFirestore.instance.collection("users").doc(currentFirebaseUser.uid)
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
         .set(
         {
           "uid": currentFirebaseUser.uid,
           "email": email,
           "name": name,
           "image": downloadUrl,
+<<<<<<< HEAD
           "phone": phone,
           "address": locationAddress,
           "status": "approved",
           "earnings": 0.0,
           "latitude": position!.latitude,
           "longitude": position!.longitude,
+=======
+          "status": "approved",
+          "userCart": ["garbageValue"],
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
         });
 
     await sharedPreferences!.setString("uid", currentFirebaseUser.uid);
     await sharedPreferences!.setString("email", email);
     await sharedPreferences!.setString("name", name);
     await sharedPreferences!.setString("imageUrl", downloadUrl);
+<<<<<<< HEAD
+=======
+    await sharedPreferences!.setStringList("userCart", ["garbageValue"]);
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
   }
 
   validateSignInForm(String email, String password, BuildContext context) async
@@ -125,7 +156,11 @@ class AuthViewModel
 
       Navigator.push(context, MaterialPageRoute(builder: (c)=> HomeScreen()));
 
+<<<<<<< HEAD
       commonViewModel.showSnackBar("logged-in successful.", context);
+=======
+      commonViewModel.showSnackBar("logged-in successfull.", context);
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
     }
     else
     {
@@ -162,7 +197,11 @@ class AuthViewModel
   readDataFromFirestoreAndSetDataLocally(User? currentFirebaseUser, BuildContext context) async
   {
     await FirebaseFirestore.instance
+<<<<<<< HEAD
         .collection("riders")
+=======
+        .collection("users")
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
         .doc(currentFirebaseUser!.uid)
         .get()
         .then((dataSnapshot) async

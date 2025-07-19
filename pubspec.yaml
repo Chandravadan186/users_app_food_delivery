@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 name: riders_app
 description: "this is riders app"
+=======
+name: users_app
+description: "this is users app"
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -44,8 +49,17 @@ dependencies:
   firebase_storage:
   cloud_firestore:
   shared_preferences:
+<<<<<<< HEAD
   intl:
   url_launcher:
+=======
+  contacts_service:
+  carousel_slider:
+  number_inc_dec:
+  provider:
+  url_launcher:
+  pay:
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
 
 dev_dependencies:
   flutter_test:

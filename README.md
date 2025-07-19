@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # riders_app
 
 this is riders app
+=======
+# users_app
+
+this is users app
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
 
 ## Getting Started
 

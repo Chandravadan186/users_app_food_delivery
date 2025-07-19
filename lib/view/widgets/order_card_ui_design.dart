@@ -1,8 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 
 import '../../model/item.dart';
 import '../mainScreens/order_details_screen.dart';
+=======
+import 'package:users_app/view/mainScreens/order_details_screen.dart';
+
+import '../../model/item.dart';
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
 
 
 class OrderCardUIDesign extends StatelessWidget

@@ -12,12 +12,26 @@ class CommonViewModel
     Position cPosition = await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
     position = cPosition;
 
+<<<<<<< HEAD
+=======
+    latitudeValue = cPosition.latitude;
+    longitudeValue = cPosition.longitude;
+
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
     placeMark = await placemarkFromCoordinates(cPosition.latitude, cPosition.longitude);
 
     Placemark placeMarkVar = placeMark![0];
 
     fullAddress = "${placeMarkVar.subThoroughfare} ${placeMarkVar.thoroughfare}, ${placeMarkVar.subLocality} ${placeMarkVar.locality}, ${placeMarkVar.subAdministrativeArea}, ${placeMarkVar.administrativeArea} ${placeMarkVar.postalCode}, ${placeMarkVar.country}";
 
+<<<<<<< HEAD
+=======
+    flatNumber.text = '${placeMarkVar.subThoroughfare} ${placeMarkVar.thoroughfare}, ${placeMarkVar.subLocality} ${placeMarkVar.locality}';
+    city.text = '${placeMarkVar.subAdministrativeArea}, ${placeMarkVar.administrativeArea} ${placeMarkVar.postalCode}';
+    state.text = '${placeMarkVar.country}';
+    completeAddress.text = fullAddress;
+
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
     return fullAddress;
   }
 
@@ -41,6 +55,7 @@ class CommonViewModel
     final snackBar = SnackBar(content: Text(message));
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
+<<<<<<< HEAD
 
   getRiderPreviousEarnings() async
   {
@@ -80,4 +95,6 @@ class CommonViewModel
       orderTotalAmount = snap.data()!["totalAmount"].toString();
     });
   }
+=======
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
 }

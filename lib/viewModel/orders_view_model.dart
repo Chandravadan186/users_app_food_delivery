@@ -1,10 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+<<<<<<< HEAD
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:riders_app/model/address.dart';
 import 'package:riders_app/view/mainScreens/parcel_delivering_screen.dart';
 import 'package:riders_app/view/mainScreens/parcel_picking_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
+=======
+import 'package:users_app/global/global_instances.dart';
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
 import '../global/global_vars.dart';
 
 
@@ -61,15 +65,24 @@ class OrderViewModel
         .set(dataMap);
   }
 
+<<<<<<< HEAD
   retrieveNewOrders()
   {
     return FirebaseFirestore.instance
+=======
+  retrieveOrders()
+  {
+    return FirebaseFirestore.instance
+        .collection("users")
+        .doc(sharedPreferences!.getString("uid"))
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
         .collection("orders")
         .where("status", isEqualTo: "normal")
         .orderBy("orderTime", descending: true)
         .snapshots();
   }
 
+<<<<<<< HEAD
   retrieveOrdersPicked()
   {
     return FirebaseFirestore.instance
@@ -100,6 +113,8 @@ class OrderViewModel
         .snapshots();
   }
 
+=======
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
   separateItemIDsForOrder(orderIDs)
   {
     List<String> separateItemIDsList=[], defaultItemList=[];
@@ -153,21 +168,35 @@ class OrderViewModel
   getSpecificOrder(String orderID)
   {
     return FirebaseFirestore.instance
+<<<<<<< HEAD
+=======
+        .collection("users")
+        .doc(sharedPreferences!.getString("uid"))
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
         .collection("orders")
         .doc(orderID)
         .get();
   }
 
+<<<<<<< HEAD
   getShipmentAddress(String addressID, String orderByUserID)
   {
     return FirebaseFirestore.instance
         .collection("users")
         .doc(orderByUserID)
+=======
+  getShipmentAddress(String addressID)
+  {
+    return FirebaseFirestore.instance
+        .collection("users")
+        .doc(sharedPreferences!.getString("uid"))
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
         .collection("userAddress")
         .doc(addressID)
         .get();
   }
 
+<<<<<<< HEAD
   confirmToDeliverParcel(orderId, sellerId, orderByUser, completeAddress, context, Address model) async
   {
     await FirebaseFirestore.instance
@@ -284,5 +313,16 @@ class OrderViewModel
     {
       throw "Could not open the google map.";
     }
+=======
+  retrieveOrdersHistory()
+  {
+    return FirebaseFirestore.instance
+        .collection("users")
+        .doc(sharedPreferences!.getString("uid"))
+        .collection("orders")
+        .where("status", isEqualTo: "ended")
+        .orderBy("orderTime", descending: true)
+        .snapshots();
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
   }
 }

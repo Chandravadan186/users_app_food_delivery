@@ -1,11 +1,18 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+<<<<<<< HEAD
 
 import '../../global/global_instances.dart';
 import '../../model/address.dart';
 import '../widgets/shipment_address_ui_design.dart';
 import '../widgets/status_banner.dart';
+=======
+import 'package:users_app/global/global_instances.dart';
+import 'package:users_app/model/address.dart';
+import 'package:users_app/view/widgets/shipment_address_ui_design.dart';
+import 'package:users_app/view/widgets/status_banner.dart';
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
 
 class OrderDetailScreen extends StatefulWidget
 {
@@ -22,6 +29,7 @@ class OrderDetailScreen extends StatefulWidget
 class _OrderDetailScreenState extends State<OrderDetailScreen>
 {
   String orderStatus = "";
+<<<<<<< HEAD
   String orderByUser = "";
   String sellerId = "";
 
@@ -45,11 +53,16 @@ class _OrderDetailScreenState extends State<OrderDetailScreen>
 
     getOrderInfo();
   }
+=======
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
       backgroundColor: Colors.black,
+=======
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
       body: SingleChildScrollView(
         child: FutureBuilder<DocumentSnapshot>(
           future: orderViewModel.getSpecificOrder(widget.orderID.toString()),
@@ -111,13 +124,22 @@ class _OrderDetailScreenState extends State<OrderDetailScreen>
                       const Divider(thickness: 4,),
 
                       orderStatus == "ended"
+<<<<<<< HEAD
                           ? Image.asset("images/success.jpg")
                           : Image.asset("images/confirm_pick.png"),
+=======
+                          ? Image.asset("images/delivered.jpg")
+                          : Image.asset("images/state.jpg"),
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
 
                       const Divider(thickness: 4,),
 
                       FutureBuilder<DocumentSnapshot>(
+<<<<<<< HEAD
                         future: orderViewModel.getShipmentAddress(dataMap["addressID"], dataMap["orderBy"]),
+=======
+                        future: orderViewModel.getShipmentAddress(dataMap["addressID"]),
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
                         builder: (c, snapshotAddress)
                         {
                           return snapshotAddress.hasData
@@ -125,10 +147,13 @@ class _OrderDetailScreenState extends State<OrderDetailScreen>
                                   model: Address.fromJson(
                                     snapshotAddress.data!.data() as Map<String, dynamic>
                                   ),
+<<<<<<< HEAD
                                   orderStatus: orderStatus,
                                   orderId: widget.orderID,
                                   sellerId: sellerId,
                                   orderByUser: orderByUser,
+=======
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
                               )
                               : Center(child: CircularProgressIndicator(),);
                         }

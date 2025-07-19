@@ -1,17 +1,27 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:riders_app/global/global_instances.dart';
 import '../../model/address.dart';
 import '../splashScreen/splash_screen.dart';
+=======
+import 'package:users_app/model/address.dart';
+import 'package:users_app/view/splashScreen/splash_screen.dart';
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
 
 class ShipmentAddressUIDesign extends StatelessWidget
 {
   Address? model;
+<<<<<<< HEAD
   String? orderStatus;
   String? orderId;
   String? sellerId;
   String? orderByUser;
 
   ShipmentAddressUIDesign({super.key, this.model, this.orderStatus, this.orderId, this.sellerId, this.orderByUser});
+=======
+
+  ShipmentAddressUIDesign({super.key, this.model,});
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
 
   @override
   Widget build(BuildContext context) {
@@ -73,6 +83,7 @@ class ShipmentAddressUIDesign extends StatelessWidget
           ),
         ),
 
+<<<<<<< HEAD
 
         orderStatus == "ended"
             ? Container() : Padding(
@@ -109,6 +120,8 @@ class ShipmentAddressUIDesign extends StatelessWidget
           ),
         ),
 
+=======
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
         Padding(
           padding: const EdgeInsets.all(10.0),
           child: Center(

@@ -53,12 +53,20 @@ class _MySplashScreenState extends State<MySplashScreen>
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Image.asset(
+<<<<<<< HEAD
                 "images/splash.webp"
+=======
+                "images/quickcart.jpg"
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
               ),
             ),
 
             const Text(
+<<<<<<< HEAD
               "Sellers App",
+=======
+              "QuickCart App",
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
               textAlign: TextAlign.center,
               style: TextStyle(
                 letterSpacing: 3,

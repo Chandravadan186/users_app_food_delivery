@@ -23,8 +23,11 @@ class _SignupScreenState extends State<SignupScreen>
   TextEditingController emailTextEditingController = TextEditingController();
   TextEditingController passwordTextEditingController = TextEditingController();
   TextEditingController confirmPasswordTextEditingController = TextEditingController();
+<<<<<<< HEAD
   TextEditingController phoneTextEditingController = TextEditingController();
   TextEditingController locationTextEditingController = TextEditingController();
+=======
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
 
 
 
@@ -89,6 +92,7 @@ class _SignupScreenState extends State<SignupScreen>
                 ),
 
                 CustomTextField(
+<<<<<<< HEAD
                   textEditingController: phoneTextEditingController,
                   iconData: Icons.phone,
                   hintString: "Phone",
@@ -97,6 +101,8 @@ class _SignupScreenState extends State<SignupScreen>
                 ),
 
                 CustomTextField(
+=======
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
                   textEditingController: passwordTextEditingController,
                   iconData: Icons.lock,
                   hintString: "Password",
@@ -112,6 +118,7 @@ class _SignupScreenState extends State<SignupScreen>
                   enabled: true,
                 ),
 
+<<<<<<< HEAD
                 CustomTextField(
                   textEditingController: locationTextEditingController,
                   iconData: Icons.my_location,
@@ -152,6 +159,8 @@ class _SignupScreenState extends State<SignupScreen>
                   ),
                 ),
 
+=======
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
                 const SizedBox(height: 32,),
 
                 ElevatedButton(
@@ -163,8 +172,11 @@ class _SignupScreenState extends State<SignupScreen>
                         confirmPasswordTextEditingController.text.trim(),
                         nameTextEditingController.text.trim(),
                         emailTextEditingController.text.trim(),
+<<<<<<< HEAD
                         phoneTextEditingController.text.trim(),
                         fullAddress,
+=======
+>>>>>>> b3ba5fc02ce374bdec3b643c678759d45161765a
                         context,
                     );
                   },
