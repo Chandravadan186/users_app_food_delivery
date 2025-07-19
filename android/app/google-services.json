@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "275076189021",
+    "project_id": "quickcart-app-9a30c",
+    "storage_bucket": "quickcart-app-9a30c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275076189021:android:ffa3216d16f2923a92b6b4",
+        "android_client_info": {
+          "package_name": "com.chandravadan.ridersappprojectnew"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBELC4lIWG5tRDmvhmmQXrgggce6AInEAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275076189021:android:fadf6b1fbd8bd94d92b6b4",
+        "android_client_info": {
+          "package_name": "com.chandravadan.sellersappproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBELC4lIWG5tRDmvhmmQXrgggce6AInEAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:275076189021:android:55834b47aefa175a92b6b4",
+        "android_client_info": {
+          "package_name": "com.chandravadan.usersappproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBELC4lIWG5tRDmvhmmQXrgggce6AInEAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
